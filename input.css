@@ -1,0 +1,701 @@
+/* CSS untuk menyembunyikan halaman yang tidak aktif */
+.page {
+    display: none;
+}
+
+/* CSS untuk menampilkan halaman yang aktif */
+.page.active {
+    display: block;
+}
+
+body {
+    margin: 0;
+    background-color: #cbb87f;
+    color: #fff;
+    font-family: 'Quicksand', sans-serif;
+
+}
+p{
+    font-family: "Quicksand", sans-serif;
+
+}
+h1,
+h2,
+h3,
+h6 {
+    font-family: 'Rowdies', cursive;
+    font-weight: 700;
+    /* Menggunakan berat 700 untuk kesan lebih tebal */
+}
+
+h4 {
+    margin: 0;
+    font-weight: 700;
+
+    font-family: 'Quicksand', sans-serif;
+
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1px 40px;
+    background-color: #7f7457;
+    backdrop-filter: blur(0);
+    z-index: 1000;
+
+}
+
+header.scrolled {
+    background-color: rgba(65, 55, 55, 0.6);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+
+}
+
+header h1 {
+    font-size: 26px;
+    color: #ffffff;
+}
+
+.ferdiet {
+    color: #721b1b;
+    /* Warna merah menyala */
+    font-weight: bold;
+}
+
+.ferdelice {
+    color: white;
+    /* Warna putih */
+    font-weight: normal;
+}
+
+
+header nav,
+#nav-menu {
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+
+    font-family: 'Rowdies', cursive;
+
+
+}
+
+
+header nav a,
+#nav-menu a {
+    gap: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #fff;
+    padding: 5px 15px;
+    border-radius: 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+header nav a:hover,
+#nav-menu a:hover {
+    color: #ffffff;
+    background-color: #3e743d;
+
+}
+
+header nav a.active,
+#nav-menu a.active {
+    color: #fff;
+    background-color: #3e743d;
+}
+
+#home,
+#meal_planner,
+#recipes,
+#contact {
+    padding: 100px 50px;
+    text-align: center;
+}
+
+#home {
+    background-color: #D1BE93;
+}
+
+.welcome-text {
+    max-width: 50%;
+}
+
+.welcome-text h2,
+.page h2 {
+    font-size: 50px;
+    color: #721b1b;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.welcome-text p,
+.page p {
+    font-size: 16px;
+    color: #fff;
+    line-height: 1.6;
+    font-weight: bold;
+}
+
+.welcome-text button,
+.form-section button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #3e743d;
+    border: none;
+    border-radius: 17px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+
+}
+
+.welcome-text button:hover,
+.form-section button:hover {
+    background-color: #45A049;
+    transform: translateY(-3px);
+
+}
+
+/* Menata gambar supaya berada di sebelah kanan */
+.welcome-image {
+    max-width: 40%;
+    height: auto;
+    margin-right: 10 px;
+    object-fit: cover;
+    float: right;
+}
+
+
+
+#meal_planner {
+    background-color: #D1BE93;
+}
+
+#recipes {
+    background-color: #D1BE93;
+}
+
+
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 100px 50px;
+}
+
+
+
+.form-section {
+    background-color: #c4b791;
+    color: #3e743d;
+    padding: 30px;
+    border-radius: 10px;
+    width: 50%;
+    margin: 20px auto;
+}
+
+.form-section label {
+    display: block;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.form-section input,
+.form-section select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #3e743d;
+    border-radius: 5px;
+}
+.reset-button-container {
+    text-align: right;
+}
+
+#reset-button {
+    border: none;
+    background: none;
+    font-weight: bold;
+    text-decoration: underline;
+    color: blue;
+    cursor: pointer;
+}
+
+/* Meal Plan Result Styling */
+.meal-plan-result {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 20px;
+    text-align: center;
+    background-color: #d2c097;
+    font-family: "Quicksand", sans-serif;
+}
+
+.meal-plan-result h3 {
+    margin-bottom: 30px;
+    font-size: 24px;
+    color: #721b1b;
+}
+
+.meal-plan-summary {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 30px;
+    margin-top: 50px;
+    font-size: 18px;
+}
+
+.meal-plan-summary p,
+.meal-plan-summary h5 {
+    margin: 5px 0;
+    display: flex;
+    justify-content: center;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+}
+
+.meal-plan-summary h5 {
+    font-size: 30px;
+    margin-top: 30px;
+}
+
+.meal-plan-summary div {
+    text-align: center;
+    padding: 20px;
+    border-radius: 20px;
+    width: 150px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.meal-plan-summary div:first-child::before {
+    content: "Kadar Hemoglobin";
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 5px 10px;
+    background-color: #ffffff;
+    color: #721b1b;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+.meal-plan-summary div:last-child::before {
+    content: "Kebutuhan Zat Besi";
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 5px 10px;
+    background-color: #ffffff;
+    color: #6b6b3c;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+.meal-plan-summary div:first-child {
+    background-color: #721b1b;
+    color: white;
+}
+
+.meal-plan-summary div:last-child {
+    background-color: #6b6b3c;
+    color: white;
+}
+
+.meal-plan-items {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    color: #721b1b;
+    background-color: #f0e5c8;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-family: "Quicksand", sans-serif;
+    position: relative; /* Menambahkan relative untuk referensi posisi kotak kecil */
+}
+
+.meal-plan-items::before {
+    content: "Meal Planner";
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 5px 15px;
+    background-color: #ffffff; /* Warna putih untuk kotak kecil */
+    color: #721b1b; /* Warna merah untuk teks */
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+.meal-plan-items div {
+    text-align: center;
+    width: 150px;
+}
+
+.meal-plan-items img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+}
+
+.meal-plan-items p {
+    margin: 5px 0;
+    font-weight: bold;
+    color: #721b1b;
+}
+
+.meal-plan-result button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #3e743d;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 17px;
+}
+
+.meal-plan-result button:hover {
+    background-color: #45A049;
+    transform: translateY(-3px);
+}
+
+/* Mobile Responsive Styling */
+@media screen and (max-width: 768px) {
+
+    .meal-plan-result button{
+        margin-top: 10px;
+        padding: 8px 10px;
+        font-size: 14px;
+    }
+    .meal-plan-items {
+        flex-direction: column; /* Change to column layout */
+        align-items: center; /* Center items vertically */
+    }
+
+    .meal-plan-items div {
+        width: auto; /* Allow div to resize based on content */
+        margin-bottom: 15px; /* Add spacing between items */
+    }
+
+    .meal-plan-items img {
+        width: 100px; /* Adjust image size */
+        height: 100px; /* Adjust image size */
+    }
+
+    /* More specific selector for p inside .meal-plan-items */
+    .meal-plan-items p {
+        color: #721b1b !important; /* Ensure the color is applied with !important */
+    }
+}
+
+
+
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.menu-toggle .bar {
+    width: 30px;
+    height: 4px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+#nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    /* Dropdown menu di bawah navbar */
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+
+
+#nav-links a {
+    margin: 10px 0;
+    text-align: center;
+}
+
+
+#contact {
+    background-color: #D1BE93;
+}
+
+#contact p {
+    max-width: 700px;
+    /* Atur lebar maksimal sesuai kebutuhan */
+    margin: 0 auto;
+    /* Agar teks terpusat */
+    word-wrap: break-word;
+    /* Agar teks yang panjang terpecah dengan baik */
+}
+
+/* Kontainer utama Contact */
+#contact-content {
+    display: flex;
+    align-items: center;
+    /* Agar gambar dan tombol berada sejajar secara vertikal */
+    justify-content: center;
+    gap: 40px;
+    /* Memberikan jarak antara gambar dan tombol */
+    margin-top: 30px;
+    /* Memberikan jarak dari tulisan */
+}
+
+/* Gambar produk berada di sebelah kiri */
+#product-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    margin-right: 100px;
+    /* Memberikan jarak antara gambar dan tombol */
+    margin-left: 50px;
+}
+
+
+#product-logo img {
+    width: 350px;
+    /* Lebar logo pada perangkat desktop */
+    height: 250px;
+    /* Tinggi logo pada perangkat desktop */
+}
+
+/* Container tombol ditumpuk secara vertikal */
+#contact-buttons {
+    display: flex;
+    flex-direction: column;
+    /* Menata tombol secara vertikal */
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    /* Memberikan jarak antara tombol */
+    gap: 15px;
+    /* Jarak antar ikon */
+
+}
+
+/* Gaya tombol */
+.contact-button {
+    text-decoration: none;
+    padding: 15px 25px;
+    background-color: #3e743d;
+    color: white;
+    border-radius: 25px;
+    text-align: center;
+    width: 300px;
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    gap: 10px;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover efek tombol */
+.contact-button:hover {
+    background-color: #45A049;
+}
+
+.contact-button svg {
+    fill: white;
+    /* Mengubah warna ikon menjadi putih */
+    margin-right: 0px;
+    /* Memberi jarak antara ikon dan teks */
+}
+
+
+@media (min-width: 1024px) {
+
+    header nav,
+    #nav-menu {
+        gap: 40px;
+        /* Jarak antar menu untuk layar desktop */
+    }
+}
+
+@media (max-width: 768px) {
+
+    #home {
+        padding: 100px 50px;
+        text-align: center;
+        background-color: #cbb87f;
+    }
+
+    #home .container {
+        display: flex;
+        flex-direction: column-reverse;
+        /* Mengubah urutan gambar dan teks */
+
+        align-items: center;
+        flex-wrap: wrap;
+        text-align: center;
+    }
+
+    /* Menyesuaikan ukuran elemen di mobile */
+    #home .w-full {
+        width: 100%;
+        padding: 10px;
+        /* Memberikan jarak antar elemen */
+    }
+
+    .welcome-image {
+        max-width: 100%;
+        height: auto;
+        margin-top: 0 auto;
+        display: block;
+
+    }
+
+    .welcome-text {
+        max-width: 80%;
+    }
+
+
+    .welcome-text h2,
+    .page h2 {
+        text-align: center;
+        font-size: 35px;
+        color: #721b1b;
+        font-weight: bold;
+        margin-bottom: 20px;
+
+
+    }
+
+    .welcome-text p,
+    .page p {
+        font-size: 12px;
+        color: #fff;
+        line-height: 1.6;
+        text-align: center;
+
+    }
+
+    .welcome-text button,
+    .form-section button {
+        margin-top: 10px;
+        padding: 8px 10px;
+        font-size: 14px;
+        font-weight: bold;
+        color: #fff;
+        background-color: #3e743d;
+        border: none;
+        border-radius: 17px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+
+    }
+
+    .welcome-text button:hover,
+    .form-section button:hover {
+        background-color: #45A049;
+        /* Efek pencahayaan */
+        transform: translateY(-3px);
+
+    }
+
+    header nav,
+    header nav a,
+    #nav-menu a {
+        font-size: 16px;
+
+    }
+
+    #nav-menu {
+        display: none;
+        flex-direction: column;
+        gap: 15px;
+        position: absolute;
+        top: 75px;
+        right: 50px;
+        background-color: #721b1b;
+        padding: 20px;
+        font-family: 'Rowdies', cursive;
+        border-radius: 15px;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    #nav-menu.active,
+    #nav-links.active {
+        display: flex;
+    }
+
+    /* Rotasi bar menjadi "X" */
+    .menu-toggle.active .bar:nth-child(1) {
+        transform: rotate(45deg);
+        position: relative;
+        top: 8px;
+    }
+
+    .menu-toggle.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle.active .bar:nth-child(3) {
+        transform: rotate(-45deg);
+        position: relative;
+        top: -8px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    #product-logo img {
+        width: 200px;
+        /* Menentukan lebar logo pada perangkat besar */
+        height: 150px;
+        /* Menentukan tinggi logo pada perangkat besar */
+        margin-right: 0px;
+        /* Mengurangi jarak antara gambar dan tombol */
+        margin-left: 125px;
+    }
+
+    /* Mengubah ukuran tombol pada perangkat mobile */
+    .contact-button {
+        width: 150px;
+        /* Mengurangi panjang tombol */
+        padding: 10px 12px;
+        /* Menyesuaikan padding */
+        font-size: 14px;
+        /* Mengurangi ukuran font */
+        margin-right: 45px;
+    }
+
+    /* Menata tombol secara vertikal dan memberi jarak yang lebih rapat */
+    #contact-buttons {
+        gap: 10px;
+        /* Mengurangi jarak antar tombol */
+    }
+}
